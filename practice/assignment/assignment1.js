@@ -7,11 +7,11 @@ function input(fruit){
 
 function isnumber(inp){
     let z=typeof(inp);
-    if(z==="string"){
-        return false;
+    if(z==="number"){
+        return true;
     }
     else{
-       return true;
+       return false;
     }
 }
 
@@ -32,12 +32,18 @@ function iseven(num){
     if(num%2===0){
         return true;
     }
+    else{
+        return false;
+    }
 }
 
 //---------------------for Odd number------------------------------5
 
 function isOdd(No){
     if(No%2!==0){
+        return true;
+    }
+    else{
         return false;
     }
 }
@@ -97,9 +103,6 @@ for(let i=0; i<newarr.length; i++)
 return max;
 }
 
-// //let points=[1,2,3,4];
-// let c=points.sort(function(a, b){return b - a});
-// console.log(c[0]);
 
 
 // //------------------------for small value in array------------------------------13
@@ -115,22 +118,7 @@ for(let i=0; i<arra.length; i++)
 }
 return max;
 }
-
-
-
-// let small=[10, 20, 30, 40];
-// let d=small.sort(function(a, b){return a- b});
-// console.log(d[0]);
 //--------------------sum of array-----------------------------------14
-
-
-// function myFunction(total, value, index, array) {
-    
-//   return total + value;
-// }
-// let numbers = [10, 20, 30, 40];
-// let sum = numbers.reduce(myFunction);
-// console.log(sum);
 function sumof(array1){
 
     for (var i = 0, sum = 0; i < array1.length; sum += array1[i++]);
@@ -139,24 +127,6 @@ function sumof(array1){
     
 //----------------------ave of array---------------------------------15
 
-// //console.log(b);
-
-// function avg(array1){
-       
-//     let m;
-//     let b=numbers.length;
-//     arraysum=sumof(array1)
-//      m=(arraysum/b);
-//      return m;
-
-//     function sumof(array1){
-
-//         for (var i = 0, sum = 0; i < array1.length; sum += array1[i++]);
-//         return sum;
-//         }
-//  }
-//  let average=avg([10, 20, 30, 40]);
-//  console.log(average);
 function avg(array1){
        
     let m;
@@ -166,20 +136,22 @@ function avg(array1){
      return m;
 
  }
- 
- 
 //------------------------------------------------------------------16
 
 
 console.log(input("Apple"));
 
 console.log(isnumber(2));
+console.log(isnumber("abc"));
 
+console.log(isstring("mmmm"));
 console.log(isstring(10));
 
 console.log(iseven(10));
+console.log(iseven(11));
 
-console.log(isOdd(11));
+console.log(isOdd(13));
+console.log(isOdd(14));
 
 console.log(len("Apple"));
 
