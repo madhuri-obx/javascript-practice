@@ -3,86 +3,84 @@ function input(fruit){
     return fruit;
 }
 
-let A=input("Apple");
-
-console.log(A)
 //-------------------Checking of number----------------------------2
-let inp= 2;
-let z=typeof(inp);
-//console.log(A)
-function check(){
+
+function isnumber(inp){
+    let z=typeof(inp);
     if(z==="string"){
-        console.log("Its a false");
+        return false;
     }
     else{
-        console.log("its a true");
+       return true;
     }
 }
 
-check(input);
 //--------------------checking of string------------------------------3
 
-let q= 10;
-let x=typeof(q);
-//console.log(A)
-function check(){
+function isstring(q){
+    let x=typeof(q);
     if(x==="string"){
-        console.log("True");
+        return true;
     }
     else{
-        console.log("False");
+        return false;
     }
 }
-
-check(q);
 //--------------------for Even number-------------------------------4
 
-function check(num){
+function iseven(num){
     if(num%2===0){
-        console.log("True")
+        return true;
     }
 }
-let y=check(10)
+
 //---------------------for Odd number------------------------------5
 
-function check2(No){
+function isOdd(No){
     if(No%2!==0){
-        console.log("False")
+        return false;
     }
-
 }
-check2(11);
+
+
 //----------------------Finding length of string-----------------------------6
 function len(A){
-    console.log(A.length);
+    let L=A.length;
+    return L;
 }
-len("Apple");
+
 //----------------------Uppercase------------------------------7
  function up(x){
-     console.log(x.toUpperCase());
+    let U= x.toUpperCase();
+    return U;
  }
-up("Apple");
+
 //------------------------Lowercase----------------------------8
 
-function low(x){
-    console.log(x.toLowerCase());
+function low(Y){
+    let V= Y.toLowerCase();
+    return V;
 }
-low("Apple");
+
 //------------------------Square of No.----------------------------9
-function sqr(Y){
-    console.log(Math.pow(Y,2))
+function square(z){
+    
+    let m=(Math.pow(z,2));
+    return m;
 }
-sqr(4);
+
 //-----------------------Square root of no.-----------------------------10
-function root(Y){
-    console.log(Math.sqrt(Y,2))
+function root(num){
+    let n=(Math.sqrt(num,2))
+    return n;
 }
-root(16);
+
 //-----------------------Length of array------------------------------11
-function arr(A){
-    console.log(A.length);
+function arr(Ar){
+    let o=(Ar.length);
+    return o;
 }
-arr([1,2,3,4,5]);
+
 //----------------------for maximum value in array-------------------------------12
 
 
@@ -98,8 +96,6 @@ for(let i=0; i<newarr.length; i++)
 }
 return max;
 }
-let newarr=[1, 2, 3, 4];
-console.log(maximum (newarr));
 
 // //let points=[1,2,3,4];
 // let c=points.sort(function(a, b){return b - a});
@@ -119,28 +115,88 @@ for(let i=0; i<arra.length; i++)
 }
 return max;
 }
-let arra=[1, 2, 3, 4];
-console.log(minimum (arra));
+
+
 
 // let small=[10, 20, 30, 40];
 // let d=small.sort(function(a, b){return a- b});
 // console.log(d[0]);
 //--------------------sum of array-----------------------------------14
-const numbers = [10, 20, 30, 40];
-let sum = numbers.reduce(myFunction);
-console.log(sum);
-function myFunction(total, value, index, array) {
-  return total + value;
-}
-//----------------------ave of array---------------------------------15
-let b=numbers.length;
-//console.log(b);
-let m;
- function avg(){
-     m=console.log(sum/b);
-     return m;
- }
- avg(sum)
 
+
+// function myFunction(total, value, index, array) {
+    
+//   return total + value;
+// }
+// let numbers = [10, 20, 30, 40];
+// let sum = numbers.reduce(myFunction);
+// console.log(sum);
+function sumof(array1){
+
+    for (var i = 0, sum = 0; i < array1.length; sum += array1[i++]);
+    return sum;
+    }
+    
+//----------------------ave of array---------------------------------15
+
+// //console.log(b);
+
+// function avg(array1){
+       
+//     let m;
+//     let b=numbers.length;
+//     arraysum=sumof(array1)
+//      m=(arraysum/b);
+//      return m;
+
+//     function sumof(array1){
+
+//         for (var i = 0, sum = 0; i < array1.length; sum += array1[i++]);
+//         return sum;
+//         }
+//  }
+//  let average=avg([10, 20, 30, 40]);
+//  console.log(average);
+function avg(array1){
+       
+    let m;
+    let b=array1.length;
+    arraysum=sumof(array1)
+     m=(arraysum/b);
+     return m;
+
+ }
+ 
  
 //------------------------------------------------------------------16
+
+
+console.log(input("Apple"));
+
+console.log(isnumber(2));
+
+console.log(isstring(10));
+
+console.log(iseven(10));
+
+console.log(isOdd(11));
+
+console.log(len("Apple"));
+
+console.log(up("Apple"));
+
+console.log(low("Apple"));
+
+console.log(square(4));
+
+console.log(root(16));
+
+console.log(arr([1,2,3,4]));
+
+console.log(maximum ([1, 2, 3, 4]));
+
+console.log(minimum ([10, 20, 30, 40]));
+
+console.log(sumof([10, 20, 30, 40]));
+
+console.log(avg([10, 20, 30, 40]));
